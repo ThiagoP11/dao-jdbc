@@ -40,5 +40,11 @@ public class Program {
         sellerDao.insert(newSeller);
         System.out.println("Inserted! new id = " + newSeller.getId());
 
+        System.out.println("\n=== TEST 4: seller Update ====");
+        Department dp = new Department(3, null);
+        Seller updateSeller = new Seller(10, "Ana Carolina", "ana@gmail.com", new Date(), 5000.0, dp);
+        sellerDao.update(updateSeller);
+        System.out.println("Updated! Atualizado o id = " + updateSeller.getId());
+
     }
 }
